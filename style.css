@@ -19,6 +19,9 @@
   --gray-color: #808080;
   --light-gray-color: #d3d3d3;
 }
+body {
+  scroll-behavior: smooth;
+}
 p,
 a {
   font-family: var(--font-secondary);
@@ -44,6 +47,10 @@ header {
   width: 100%;
   height: 80px;
   margin-bottom: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 header .container {
   display: flex;
@@ -51,10 +58,13 @@ header .container {
   align-items: center;
   padding: 20px 0;
 }
-
+.side-menu {
+  display: none;
+}
 .logo-con {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   font-family: var(--font-primary);
 }
@@ -84,6 +94,7 @@ nav ul li a {
 
 /* hero */
 .hero {
+  margin-top: 100px;
   margin-bottom: 50px;
 }
 .hero .container {
@@ -497,10 +508,66 @@ ul li {
   background: var(--red-color);
   color: var(--white-color);
 }
-
+#plan2 {
+  display: none;
+}
 @media (max-width: 900px) {
   .entertainment-plans-container {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Convert layout to single column */
+  .entertainment-plans-container {
+    grid-template-columns: 1fr !important;
+  }
+
+  #plan1 {
+    display: none;
+  }
+  #plan2 {
+    display: block;
+  }
+  /* Hide the right-side big details on mobile */
+  .entertainment-plans-details {
+    display: none !important;
+  }
+
+  /* Mobile details box */
+  .mobile-details {
+    display: none;
+    background: #fff;
+    margin: 10px 0 20px 0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.3s ease;
+  }
+
+  /* Show selected mobile detail */
+  .mobile-details.active {
+    display: block;
+  }
+
+  /* Keep your theme as is */
+  .mobile-details h3 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .mobile-details ul li {
+    font-size: 15px;
+  }
+
+  .mobile-details .price-big {
+    font-size: 32px;
+  }
+
+  /* Make buttons responsive */
+  .mobile-details .get-btn {
+    width: 100%;
+    padding: 14px;
   }
 }
 
@@ -962,4 +1029,196 @@ ul li {
 .footer-section-bottom p a {
   color: var(--red-color);
   text-decoration: none;
+}
+
+/*  */
+
+.mobile-menu,
+.mobile-con {
+  padding: 20px;
+}
+.mobile-menu ul li a,
+.mobile-con ul li a {
+  color: var(--white-color);
+  font-weight: 600;
+}
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 30px;
+}
+.mobile-menu ul li {
+  margin-bottom: 20px;
+}
+.mobile-side-menu {
+  display: none;
+}
+@media screen and (max-width: 575px) {
+  nav {
+    display: none;
+  }
+  .side-menu {
+    display: block;
+  }
+
+  .container {
+    width: 95%;
+  }
+  header {
+    padding: 10px;
+  }
+  .mobile-side-menu {
+    position: fixed;
+    right: -100%;
+    top: 80px;
+    width: 100%;
+    height: 90vh;
+    background: var(--blue-color);
+    box-shadow: -2px 0 12px rgba(0, 0, 0, 0.1);
+    transition: 0.4s ease;
+    z-index: 999;
+    padding: 20px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .features-item {
+    width: 100%;
+    align-items: start;
+  }
+  .features-num {
+    width: 140px;
+  }
+  .mobile-side-menu.active {
+    right: 0;
+  }
+
+  .side-menu i {
+    font-size: 26px;
+    cursor: pointer;
+  }
+  .hero .container {
+    grid-template-columns: 1fr;
+    height: auto;
+    width: 96%;
+    height: 100vh;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+  .section2 h2 {
+    font-size: 28px;
+  }
+  .cta-section h2 {
+    width: 100%;
+    font-size: 28px;
+  }
+  .en-con {
+    gap: 5px;
+  }
+  .entertainment-plans-item {
+    align-items: start;
+  }
+  .features {
+    flex-direction: column;
+  }
+  .features-right {
+    width: auto;
+  }
+  .features-left {
+    flex-direction: column;
+  }
+  .features-text {
+    transform: rotate(0deg);
+    line-height: 1.2;
+    writing-mode: horizontal-tb;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  nav {
+    display: none;
+  }
+  .side-menu {
+    display: block;
+  }
+
+  .container {
+    width: 95%;
+  }
+  header {
+    padding: 10px;
+  }
+  .mobile-side-menu {
+    position: fixed;
+    right: -100%;
+    top: 80px;
+    width: 100%;
+    height: 90vh;
+    background: var(--blue-color);
+    box-shadow: -2px 0 12px rgba(0, 0, 0, 0.1);
+    transition: 0.4s ease;
+    z-index: 999;
+    padding: 20px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .features-item {
+    width: 100%;
+    align-items: start;
+  }
+  .features-num {
+    width: 140px;
+  }
+  .mobile-side-menu.active {
+    right: 0;
+  }
+
+  .side-menu i {
+    font-size: 26px;
+    cursor: pointer;
+  }
+  .hero .container {
+    grid-template-columns: 1fr;
+    height: auto;
+    width: 96%;
+    height: 100vh;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+  .section2 h2 {
+    font-size: 28px;
+  }
+  .cta-section h2 {
+    width: 100%;
+    font-size: 28px;
+  }
+  .en-con {
+    gap: 5px;
+  }
+  .entertainment-plans-item {
+    align-items: start;
+  }
+  .features {
+    flex-direction: column;
+  }
+  .features-right {
+    width: auto;
+  }
+  .features-left {
+    flex-direction: column;
+  }
+  .features-text {
+    transform: rotate(0deg);
+    line-height: 1.2;
+    writing-mode: horizontal-tb;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (min-width: 992px) and (max-width: 1199px) {
 }

@@ -31,8 +31,27 @@
             <li><a href="#" class="nav-btn">Call Now</a></li>
           </ul>
         </nav>
+        <div class="side-menu">
+          <i class="fa-solid fa-list"></i>
+        </div>
       </div>
     </header>
+    <div class="mobile-side-menu">
+      <div class="mobile-menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Plans</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="mobile-con">
+        <ul>
+          <li><a href="#">+91 9677100651</a></li>
+          <li><a href="#">acfibernet@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
     <!-- hero -->
     <section class="hero">
       <div class="container">
@@ -161,7 +180,7 @@
     <!-- cta -->
 
     <!-- section4 -->
-    <section class="entertainment-plans-section">
+    <section class="entertainment-plans-section" id="plan1">
       <h2 class="entertainment-plans-title">
         <span>Entertainment</span> Plans
       </h2>
@@ -304,6 +323,160 @@
       </div>
     </section>
     <!-- section4 -->
+    <section class="entertainment-plans-section" id="plan2">
+      <h2 class="entertainment-plans-title">
+        <span>Entertainment</span> Plans
+      </h2>
+
+      <div class="entertainment-plans-container">
+        <!-- LEFT SIDEBAR LIST -->
+        <div class="entertainment-plans-list">
+          <!-- PLAN ITEM -->
+          <div class="entertainment-plans-item active" data-plan="starter">
+            <div class="en-con">
+              <div class="icon"><i class="fa-solid fa-bolt"></i></div>
+              <div>
+                <h4>ACT Starter Combo</h4>
+                <p>50 Mbps Speed</p>
+              </div>
+            </div>
+            <span class="price">₹675/mo</span>
+          </div>
+
+          <!-- MOBILE DETAILS (WILL BE INJECTED HERE) -->
+          <div class="mobile-details" id="mobile-starter"></div>
+
+          <div class="entertainment-plans-item" data-plan="starter-plus">
+            <div class="en-con">
+              <div class="icon"><i class="fa-solid fa-cloud"></i></div>
+              <div>
+                <h4>ACT Starter Plus Combo + Streaming</h4>
+                <p>75 Mbps Speed</p>
+              </div>
+            </div>
+            <span class="price">₹875/mo</span>
+          </div>
+
+          <div class="mobile-details" id="mobile-starter-plus"></div>
+
+          <div class="entertainment-plans-item" data-plan="superstar">
+            <div class="en-con">
+              <div class="icon"><i class="fa-solid fa-video"></i></div>
+              <div>
+                <h4>ACT Superstar</h4>
+                <p>200 Mbps Speed</p>
+              </div>
+            </div>
+            <span class="price">₹1075/mo</span>
+          </div>
+
+          <div class="mobile-details" id="mobile-superstar"></div>
+
+          <div class="entertainment-plans-item" data-plan="blast">
+            <div class="en-con">
+              <div class="icon"><i class="fa-solid fa-wifi"></i></div>
+              <div>
+                <h4>ACT Blast Bonanza</h4>
+                <p>300 Mbps Speed</p>
+              </div>
+            </div>
+            <span class="price">₹1349/mo</span>
+          </div>
+
+          <div class="mobile-details" id="mobile-blast"></div>
+
+          <div class="entertainment-plans-item" data-plan="storm">
+            <div class="en-con">
+              <div class="icon"><i class="fa-solid fa-signal"></i></div>
+              <div>
+                <h4>ACT Storm Bonanza (Mesh Router)</h4>
+                <p>300 Mbps Speed</p>
+              </div>
+            </div>
+            <span class="price">₹1599/mo</span>
+          </div>
+
+          <div class="mobile-details" id="mobile-storm"></div>
+        </div>
+
+        <!-- RIGHT DESKTOP DETAILS -->
+        <div class="entertainment-plans-details">
+          <div id="starter" class="entertainment-plans-card active-card">
+            <h3>ACT Starter Combo</h3>
+            <h2 class="price-big">₹675 <span>/ Month</span></h2>
+            <p class="speed">50 Mbps Speed</p>
+
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Disney + Hotstar</li>
+              <li><i class="fa-solid fa-check"></i> SunNXT</li>
+              <li><i class="fa-solid fa-check"></i> 300+ Channels</li>
+            </ul>
+
+            <button class="get-btn">Get Now</button>
+          </div>
+
+          <div id="starter-plus" class="entertainment-plans-card">
+            <h3>ACT Starter Plus Combo + Streaming</h3>
+            <h2 class="price-big">₹875 <span>/ Month</span></h2>
+            <p class="speed">75 Mbps Speed</p>
+
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Netflix</li>
+              <li><i class="fa-solid fa-check"></i> Disney + Hotstar</li>
+              <li><i class="fa-solid fa-check"></i> SunNXT</li>
+              <li><i class="fa-solid fa-check"></i> 300+ Channels</li>
+            </ul>
+
+            <button class="get-btn">Get Now</button>
+          </div>
+
+          <div id="superstar" class="entertainment-plans-card">
+            <h3>ACT Superstar</h3>
+            <h2 class="price-big">₹1075 <span>/ Month</span></h2>
+            <p class="speed">200 Mbps Speed</p>
+
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Netflix</li>
+              <li><i class="fa-solid fa-check"></i> Disney + Hotstar</li>
+              <li><i class="fa-solid fa-check"></i> SunNXT</li>
+              <li><i class="fa-solid fa-check"></i> 300+ Channels</li>
+            </ul>
+
+            <button class="get-btn">Get Now</button>
+          </div>
+
+          <div id="blast" class="entertainment-plans-card">
+            <h3>ACT Blast Bonanza</h3>
+            <h2 class="price-big">₹1349 <span>/ Month</span></h2>
+            <p class="speed">300 Mbps Speed</p>
+
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Netflix</li>
+              <li><i class="fa-solid fa-check"></i> Disney + Hotstar</li>
+              <li><i class="fa-solid fa-check"></i> SunNXT</li>
+              <li><i class="fa-solid fa-check"></i> 300+ Channels</li>
+            </ul>
+
+            <button class="get-btn">Get Now</button>
+          </div>
+
+          <div id="storm" class="entertainment-plans-card">
+            <h3>ACT Storm Bonanza (Mesh Router)</h3>
+            <h2 class="price-big">₹1599 <span>/ Month</span></h2>
+            <p class="speed">300 Mbps Speed</p>
+
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Netflix</li>
+              <li><i class="fa-solid fa-check"></i> Disney + Hotstar</li>
+              <li><i class="fa-solid fa-check"></i> SunNXT</li>
+              <li><i class="fa-solid fa-check"></i> 300+ Channels</li>
+            </ul>
+
+            <button class="get-btn">Get Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- section5 -->
     <section class="features">
       <div class="features-left">
@@ -514,7 +687,7 @@
 
           <!-- CENTER CONTACT -->
           <div class="footer-section-center">
-            <p class="footer-section-label">FOLLOW US</p>
+            <p class="footer-section-label">CONTACT US</p>
 
             <p class="footer-section-info"><strong>+91 9677100651</strong></p>
             <p class="footer-section-info">acfibernet@gmail.com</p>
