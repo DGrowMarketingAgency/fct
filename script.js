@@ -1,5 +1,6 @@
 const menuBtn = document.querySelector(".side-menu i");
 const mobileMenu = document.querySelector(".mobile-side-menu");
+const mobileLinks = document.querySelectorAll(".mobile-side-menu a");
 
 // Toggle menu
 menuBtn.addEventListener("click", () => {
@@ -11,6 +12,13 @@ document.addEventListener("click", (e) => {
   if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
     mobileMenu.classList.remove("active");
   }
+});
+
+// Close menu when clicking on any link inside the side-menu
+mobileLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+  });
 });
 
 const items = document.querySelectorAll(".entertainment-plans-item");
